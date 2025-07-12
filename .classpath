@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-21">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Program Files/Apache Software Foundation/Tomcat 10.1/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/mysql-connector-j-8.4.0/mysql-connector-j-8.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/jars/poi-5.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/jars/poi-ooxml-5.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/jars/poi-ooxml-full-5.2.3.jar"/>
+	<classpathentry kind="lib" path="C:/jars/xmlbeans-5.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/jars/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="C:/jars/commons-compress-1.21.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Radhika/Downloads/poi-bin-5.2.3-20220909/poi-bin-5.2.3/lib/commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Radhika/Downloads/pdfbox-2.0.27.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Radhika/Downloads/commons-io-2.11.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Radhika/Downloads/opennlp-tools-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Radhika/Downloads/slf4j-simple-1.7.36.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Radhika/Downloads/slf4j-api-1.7.36.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>
