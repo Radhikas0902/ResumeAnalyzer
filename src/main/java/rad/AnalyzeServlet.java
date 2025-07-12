@@ -14,7 +14,8 @@ import java.io.*;
 import java.sql.*;
 import java.util.*;
 
-@WebServlet("/upload")
+@WebServlet("/analyze")
+
 @MultipartConfig
 public class AnalyzeServlet extends HttpServlet {
 
