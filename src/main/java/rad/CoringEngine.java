@@ -10,16 +10,22 @@ import java.util.*;
 
 public class CoringEngine {
 
-    private static final Set<String> STOPWORDS = Set.of(
-        "the", "is", "at", "which", "on", "a", "an", "and", "in", "to", "for", "of", "with", "as", "by"
-    );
+	private static final Set<String> STOPWORDS = new HashSet<>(Arrays.asList(
+		    "the", "is", "at", "which", "on", "a", "an", "and", "in", "to", "for", "of", "with", "as", "by"
+		));
 
     public static List<String> extractKeywords(String text) {
         List<String> keywords = new ArrayList<>();
         try (
-            InputStream tokenModelIn = CoringEngine.class.getResourceAsStream("/models/en-token.bin");
-            InputStream posModelIn = CoringEngine.class.getResourceAsStream("/models/en-pos-maxent.bin")
+            InputStream tokenModelIn = CoringEngine.class.getClassLoader().getResourceAsStream("models/en-token.bin");
+            InputStream posModelIn = CoringEngine.class.getClassLoader().getResourceAsStream("models/en-pos-maxent.bin")
         ) {
+            // Check if model files were loaded correctly
+            if (tokenModelIn == null || posModelIn == null) {
+                System.err.println("Model files not found in classpath! Check models directory.");
+                return keywords;
+            }
+
             TokenizerModel tokenModel = new TokenizerModel(tokenModelIn);
             Tokenizer tokenizer = new opennlp.tools.tokenize.TokenizerME(tokenModel);
             String[] tokens = tokenizer.tokenize(text.toLowerCase());

@@ -68,7 +68,14 @@ public class AnalyzeServlet extends HttpServlet {
         } else if (fileName.endsWith(".docx")) {
             resumeText = extractTextFromDocx(fileContent);
         } else {
-            resumeText = new String(fileContent.readAllBytes());
+        	ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+        	byte[] data = new byte[1024];
+        	int nRead;
+        	while ((nRead = fileContent.read(data, 0, data.length)) != -1) {
+        	    buffer.write(data, 0, nRead);
+        	}
+        	resumeText = buffer.toString("UTF-8");
+
         }
 
         // Skill extraction

@@ -1,0 +1,4 @@
+rad\AnalyzeServlet.class
+rad\DBConnection.class
+rad\ResumeParser.class
+rad\CoringEngine.class
