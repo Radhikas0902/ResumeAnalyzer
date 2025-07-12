@@ -68,7 +68,8 @@
 <body>
     <div class="container">
         <h2>Upload Your Resume</h2>
-        <form action="upload" method="post" enctype="multipart/form-data">
+        <form action="<%= request.getContextPath() %>/upload" method="post" enctype="multipart/form-data">
+
             <label for="name">Your Name</label>
             <input type="text" name="name" id="name" required />
 
